@@ -1,5 +1,9 @@
 @charset "utf-8";
  
+
+body {
+  max-width: 100%;
+}
 /* CSS - モーションタイポグラフィ */
 .hero-typography {
   min-height: 100vh;
@@ -160,4 +164,73 @@
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   line-height: 1.8;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.chart-container.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#radarChart {
+  display: block;
+}
+
+#header {
+  
+  margin: 300px;
+}
+
+.menu {
+    position: fixed;   /* 画面に固定 */
+    top: 10px;         /* 上からの距離 */
+    left: 550px;       /* 右からの距離 */
+    display: flex;     /* 横並び */
+    gap: 40px;         /* 要素間の余白 */
+    color: white;
+    
+}
+
+.menu h3 {
+    margin: 0;
+    cursor: pointer;
+    
+}
+
+.heads {
+  position: fixed;   /* 画面に固定 */
+    top: 10px;         /* 上からの距離 */
+    left: 15px;       /* 右からの距離 */
+    display: flex;     /* 横並び */
+    gap: 40px;         /* 要素間の余白 */
+    position: absolute;
+    text-align: center;
+    /* 重なり順を指定*/
+    z-index: 1;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+    
+
 }
