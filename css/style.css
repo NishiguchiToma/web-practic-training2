@@ -234,3 +234,49 @@ h1 {
     
 
 }
+
+footer {
+  background-color: #1a1a3e;
+  margin-top: auto;
+  padding: 20px 0;
+  /* text-align: center; */
+
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  text-align: right;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.small {
+  color: white;
+  text-align: end;
+}
+
+#page-top {
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  /* left: 0; */
+  /* width: 100%; */
+  padding: 20px 0;
+  right: 20px;
+  bottom: 20px;
+
+}
+
+#page-top a {
+  display: block;
+  background: white;
+  color: black;
+  padding: 12px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  width: 100px;
+  opacity: 60%;
+}
