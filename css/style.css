@@ -222,7 +222,7 @@ h1 {
 
 .menu a {
   text-decoration: none;
-  color: white;
+  color: yellow;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -304,12 +304,11 @@ footer {
 #page-top {
   text-align: right;
   position: fixed;
-  bottom: 0;
   /* left: 0; */
   /* width: 100%; */
   padding: 20px 0;
   right: 20px;
-  bottom: 20px;
+  top: 480px;
   margin: 60px 0;
 }
 
