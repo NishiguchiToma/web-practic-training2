@@ -173,19 +173,47 @@ h1 {
   margin-bottom: 20px;
 }
 
-.chart-container {
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 8px;
+#skill {
+  background-color: #1a1a3e;
+  min-height: 100vh;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
+  justify-content: center; /* ← 真ん中にまとめる */
 }
+
+#skill h2 {
+  color: red;
+  text-align: left;
+  font-family: serif;
+}
+
+#skill p {
+  font-family: serif;
+}
+
+.skill-title{
+  color: #111;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.chart-container{
+  width: min(90vw, 650px);
+  height: 520px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .chart-container.active {
   opacity: 1;
@@ -298,18 +326,20 @@ footer {
 
 .small {
   color: white;
-  text-align: end;
+  font-family: serif;
 }
 
 #page-top {
-  text-align: right;
+  
   position: fixed;
   /* left: 0; */
   /* width: 100%; */
-  padding: 20px 0;
+  padding: 30px 0;
   right: 20px;
   top: 480px;
   margin: 60px 0;
+  font-family: serif;
+  font-size: 0.8rem;
 }
 
 .top-btn {
@@ -344,6 +374,7 @@ footer {
   text-decoration: none;
   width: 100px;
   opacity: 60%;
+  text-align: center;
 }
 
 
@@ -356,6 +387,11 @@ footer {
   padding: 0 20px;
   margin-top: 10px;
   border-radius: 8px;
+  font-family: serif;
+}
+
+.mail {
+  font-family: serif;
 }
 
 /* 開いた状態 */
@@ -433,3 +469,58 @@ footer {
   transform: translateX(8px);
 }
 
+/* セクション背景を黒に */
+#intro{
+  background:#1a1a3e;
+  padding:120px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+#intro h2 {
+  color: white;
+  display: block;
+  padding-left: 100px;
+  font-family: serif;
+}
+
+/* 白いカード */
+/* 白カード */
+.intro-container{
+  background:white;
+  width:min(1000px, 92vw);
+  border-radius:16px;
+  padding:60px;
+
+  display:flex;            /* ← 横並び */
+  gap:50px;
+  align-items:center;
+  font-family: serif;
+}
+
+/* 左文章 */
+.intro-text{
+  flex:1;
+  
+}
+
+.intro-text p{
+  color:#222;
+  line-height:2;
+  font-size:16px;
+  white-space:pre-line;
+  
+}
+
+/* 右写真 */
+.intro-photo{
+  width:260px;
+  flex-shrink:0;
+}
+
+.intro-photo img{
+  width:100%;
+  border-radius:16px;
+  object-fit:cover;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
