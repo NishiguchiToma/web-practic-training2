@@ -14,6 +14,7 @@ body {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   padding: 40px;
   text-align: center;
+  max-width: auto;
 }
  
 /* 波打つテキスト */
@@ -184,13 +185,15 @@ h1 {
 }
 
 #skill h2 {
-  color: red;
+  color: white;
   text-align: left;
   font-family: serif;
+  font-size: 60px;
 }
 
 #skill p {
   font-family: serif;
+  font-size: 25px;
 }
 
 .skill-title{
@@ -218,12 +221,69 @@ h1 {
 .chart-container.active {
   opacity: 1;
   transform: translateY(0);
+  height: 100%;
+  width: 80%;
 }
 
 #radarChart {
   display: block;
   border-color: white;
 }
+
+
+
+ul li{
+  text-align:center;
+  font-family:serif;
+}
+
+/* 画像 */
+ul img{
+  display:block;
+  margin:0 auto 8px;
+}
+
+.skill-icons{
+  list-style:none;
+  padding:0;
+  margin:40px auto;
+
+  display:grid;
+  grid-template-columns:repeat(5,120px);
+  justify-content:center;
+  gap:40px 60px;
+}
+
+.skill-icons li{
+  text-align:center;
+  font-family:serif;
+}
+
+.skill-icons img{
+  display:block;
+  margin:0 auto 8px;
+}
+
+/* ★ 下段中央にする魔法 */
+.skill-icons li:nth-child(1) {
+grid-column: 1;
+}
+.skill-icons li:nth-child(2) {
+grid-column:3;
+}
+.skill-icons li:nth-child(3) {
+grid-column: 5;
+}
+.skill-icons li:nth-child(4){
+grid-column: 2;
+}
+
+.skill-icons li:nth-child(5){
+  grid-column:4;
+}
+
+
+
 
 #header {
   position: sticky;
@@ -238,7 +298,7 @@ h1 {
 .menu {
     position: fixed;   /* 画面に固定 */
     top: 10px;         /* 上からの距離 */
-    left: 600px;       /* 右からの距離 */
+    right: 100px;       /* 右からの距離 */
     display: flex;     /* 横並び */
     gap: 35px;         /* 要素間の余白 */
     color: white;
@@ -311,6 +371,7 @@ footer {
   margin-top: auto;
   padding: 20px 0;
   /* text-align: center; */
+  max-width: auto;
 
 }
 
@@ -336,7 +397,7 @@ footer {
   /* width: 100%; */
   padding: 30px 0;
   right: 20px;
-  top: 480px;
+  bottom: -50px;
   margin: 60px 0;
   font-family: serif;
   font-size: 0.8rem;
@@ -379,6 +440,14 @@ footer {
 
 
 /* フォーム本体 */
+
+#contact{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;        /* 縦中央 */
+  align-items:center;            /* 横中央 */
+}
+
 .contact-form {
   max-height: 0;
   overflow: hidden;
@@ -388,10 +457,15 @@ footer {
   margin-top: 10px;
   border-radius: 8px;
   font-family: serif;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  max-width: auto;
 }
 
 .mail {
   font-family: serif;
+  text-align:center;
 }
 
 /* 開いた状態 */
@@ -407,6 +481,7 @@ footer {
   margin-bottom: 12px;
   padding: 8px;
   box-sizing: border-box;
+  border: black solid 1px;
 }
 
 .contact-form button {
@@ -419,12 +494,13 @@ footer {
 
 #moreItems {
   max-height: 0;
-  overflow: hidden;
   transition: max-height 0.6s ease;
+  display: none;
 }
 
 #moreItems.open {
-  max-height: 1200px; /* 十分大きく */
+  max-height: 1750px; /* 十分大きく */
+  display: block;
 }
 
 #viewMore {
@@ -480,15 +556,17 @@ footer {
 #intro h2 {
   color: white;
   display: block;
-  padding-left: 100px;
+  padding-right: 50px;
   font-family: serif;
+  font-size: 60px;
+  
 }
 
 /* 白いカード */
 /* 白カード */
 .intro-container{
   background:white;
-  width:min(1000px, 92vw);
+  width:min(1200px, 92vw);
   border-radius:16px;
   padding:60px;
 
@@ -496,6 +574,8 @@ footer {
   gap:50px;
   align-items:center;
   font-family: serif;
+  font-size: 20px;
+
 }
 
 /* 左文章 */
@@ -504,13 +584,9 @@ footer {
   
 }
 
-.intro-text p{
-  color:#222;
-  line-height:2;
-  font-size:16px;
-  white-space:pre-line;
-  
-}
+
+
+
 
 /* 右写真 */
 .intro-photo{
