@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
             function drawAxesAndLabels() {
                 ctx.strokeStyle = "#aaa";
-                ctx.fillStyle = "navy";
+                ctx.fillStyle = "purple";
                 ctx.font = "20px serif";
  
                 for (let i = 0; i < labels.length; i++) {
